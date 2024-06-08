@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk-slim-buster
+WORKDIR /app
+COPY /target/jdbc-postgresql-demo-1.0-SNAPSHOT.jar /app/bookshop.jar
+ENTRYPOINT ["java", "-jar", "bookshop.jar"]
